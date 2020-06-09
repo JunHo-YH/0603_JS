@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    비번 <input type="number" class="num1">
+    비번확인 <input type="number" class="num2">
+    <button onclick="check()">입력한 두 수의 합</button>
+
+    <script>
+        
+        function sum() {            
+            let a = document.querySelector(".num1");
+            let b = document.querySelector(".num2");
+            let aa = Number(a.value);
+            let bb = Number(b.value);
+            alert(aa + bb);
+        }
+
+        function check() {
+            let a = document.querySelector(".num1");
+            let b = document.querySelector(".num2");
+            let aaa = a.value;
+            let bbb = b.value;
+            if(aaa != bbb){
+                alert("비밀번호가 같지 않습니다.");
+            }else{
+                alert("비밀번호가 같습니다.");
+            }
+        }
+    </script>
+    
+</body>
+</html>
