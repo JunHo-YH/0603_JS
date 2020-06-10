@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const abc = function a(x){
+            return x * x;
+        }
+
+        
+        // 화살표 함수의 규칙
+        // 1. 매개변수가 하나일 경우에 인자를 정의시 괄호를 생략할 수 있다.
+        // 2. 매개변수가 없거나 둘 이상일 경우 반드시 괄호를 넣어줘야한다.
+        // 3. 화살표 함수 코드 블록을 지정하지 않고 한 문장으로 작성시 return문을 사용하지 않아도
+        //   화살표 오른쪽 표현식의 계산 결과 값으로 인정된다.
+        // 4. 화살표 함수 코드 블록을 지정했을 경우, 반환 하고자 하는 값에 return문을 반드시
+        //    작성해야하고 return문이 없을 경우 undefined로 반환한다.
+        
+        // 매개변수가 한 개이므로 괄호를 해줄 필요없고, 코드 블록이 한 문장이므로 리턴문도 필요없다.
+        const new_abc = x => x*x;
+        console.log(new_abc(9));
+        // 81반환
+
+        // x와 y 두 매개변수를 가지는 화살표 함수로 매개변수에 괄호를 사용하고
+        //코드 블록이 한 문장이므로 리턴문은 필요없다.
+        const new_bbb = (x, y) => x+y;
+        console.log(new_bbb(1,2));
+        //3반환
+
+        // ...agrs = 엄청 많은 매개변수
+        // ...args = 배열값으로 저장된다.
+        const new_ccc = (...args) =>{
+            let total = 0;
+            for(let i = 0; i<args.length; i++){
+                total = total + args[i];
+            }
+            return total;
+        }
+
+        let ran = Math.floor(Math.random() * 10 + 1);
+        console.log(new_ccc(ran,ran,ran,ran,ran));
+        console.log(new_ccc(1,2,3));
+
+
+        // setInterval(function(){
+        //     alert("안녕하세요");
+        // },3000);
+
+        let q = setInterval(() => {
+                alert("안녕하세요");
+                }, 3000);
+
+        //  Interval 멈추는 방법
+        clearInterval(q);
+
+
+    </script>
+</body>
+</html>
