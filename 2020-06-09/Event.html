@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <input type="text" onblur="bbb()">
+
+
+    <!-- <select name="a" id="b" onchange="bbb();">
+        <option value="1">1</option>
+        <option value="2">2</option>
+
+    </select> -->
+    
+    <script>
+        const aaa = document.querySelector(".abc");
+        
+        function bbb(){
+            alert("이벤트가 실행됐습니다.");
+        }
+
+        // onblur: 포커스를 잃었을 때 함수를 실행한다.
+        // onfocus: 포인터를 줬을 때 함수가 실행된다.
+        // onchange: value값이 변경 됐을 때 함수를 실행
+        // onmouseup: 마우스를 땠을 때 실행
+        // onmousedown : 눌럿을때 함수 실행
+
+        // aaa.addEventListener("onload")
+        // body를 로드했을 때 실행
+    </script>
+    
+</body>
+</html>
