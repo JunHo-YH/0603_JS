@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="t_now">00:00:00</h1>
+    
+    <script>
+        const now = document.querySelector(".t_now"); //클래스가 t_now인 요소를 선택한다.
+
+    function start(){                           // 시, 분, 초를 변수에 담고 화면에 표시할 sstart함수를 만든다.
+        let time = new Date();
+        let h = time.getHours();
+        let m = time.getMinutes();
+        let s = time.getSeconds();
+        now.innerHTML = `${h}:${m}:${s}`;
+    }
+        now.style.position = "absolute";        //스타일을 지정해준다.
+        now.style.top = "30%";
+        now.style.left = "45%";
+        now.style.fontSize = "5rem"
+
+     setInterval(start,1000);                   //start함수를 1초마다 실행한다.
+    </script>
+
+    <!-- <script>
+    // let now = new Date();
+    // console.log(now);    
+    // console.log(now.getHours);
+    // console.log(now.getMinutes);
+    // console.log(now.getSeconds);
+</script> -->
+</body>
+</html>
